@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /build
 /bin
 /out
@@ -13,10 +14,15 @@
 /.apt_generated
 /WebContent/data
 =======
+=======
+>>>>>>> e3088ec6a9f38753381583fbc5c60580ce3b5e41
 *.class
 
 # Package Files #
 *.jar
 *.war
 *.ear
+<<<<<<< HEAD
+>>>>>>> e3088ec6a9f38753381583fbc5c60580ce3b5e41
+=======
 >>>>>>> e3088ec6a9f38753381583fbc5c60580ce3b5e41
