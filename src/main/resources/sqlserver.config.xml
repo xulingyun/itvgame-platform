@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connection>
+	<property name="jdbc.show_sql">false</property>
+	<property name="jdbc.queryKeySql">select @@IDENTITY</property>
+	<property name="jdbc.datasource">com.mchange.v2.c3p0.ComboPooledDataSource</property>
+	<!-- 
+	<property name="jdbc.driverClass">com.microsoft.sqlserver.jdbc.SQLServerDriver</property> 
+	<property name="jdbc.jdbcUrl">jdbc:sqlserver://218.77.121.41:1433;databaseName=itvgame</property>
+	-->
+	<property name="jdbc.driverClass">net.sourceforge.jtds.jdbc.Driver</property>
+	<!-- <property name="jdbc.jdbcUrl">jdbc:jtds:sqlserver://218.77.121.41:1433/itvgame</property> -->
+	<property name="jdbc.jdbcUrl">jdbc:jtds:sqlserver://192.168.16.30:1433/itvgame;instance=sql2005</property>
+	
+	<property name="jdbc.user">itvgame</property>
+	<property name="jdbc.password">itvgame</property>
+	
+	<property name="jdbc.maxPoolSize">200</property>
+	<property name="jdbc.minPoolSize">10</property>
+	<property name="jdbc.initialPoolSize">10</property>
+	<property name="jdbc.acquireIncrement">5</property>
+	<property name="jdbc.maxStatements">1000</property>
+	<property name="jdbc.maxIdleTime">600</property>
+	<property name="jdbc.checkoutTimeout">5000</property>
+
+</connection>

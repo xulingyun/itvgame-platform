@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+create database itvgame charset=gbk;
+grant all privileges on itvgame.* to 'itvgame'@'%' identified by 'itvgame' with grant option;
+flush privileges;
+ -->
+<connection>
+	<property name="jdbc.show_sql">false</property>
+	<property name="jdbc.queryKeySql">select LAST_INSERT_ID()</property>
+	<property name="jdbc.datasource">com.mchange.v2.c3p0.ComboPooledDataSource</property>
+	<property name="jdbc.driverClass">com.mysql.jdbc.Driver</property>
+	<property name="jdbc.jdbcUrl">jdbc:mysql://localhost:3306/itvgame?characterEncoding=GBK</property>
+	<property name="jdbc.user">root</property>
+	<property name="jdbc.password">root</property>
+	
+	<property name="jdbc.maxPoolSize">200</property>
+	<property name="jdbc.minPoolSize">10</property>
+	<property name="jdbc.initialPoolSize">10</property>
+	<property name="jdbc.acquireIncrement">5</property>
+	<property name="jdbc.maxStatements">1000</property>
+	<property name="jdbc.maxIdleTime">600</property>
+	<property name="jdbc.checkoutTimeout">5000</property>
+
+</connection>

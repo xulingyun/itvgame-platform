@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurations>
+	<configuration id="global">
+		<property name="supportCache">true</property>
+		<property name="sql.dialect">mysql</property>
+		<property name="connection.xml">/mysql.config.xml</property>
+		<property name="telcomOperator">telcomsh</property>
+		<property name="serviceProvider">ohyeah</property>
+		<users>
+			<user>
+				<name>igtest01</name>
+				<passwd>76ba8e2f5ea9b4783377a966b6d601d4</passwd>
+				<role>test</role>
+			</user>
+			<user>
+				<name>igadmin01</name>
+				<passwd>76ba8e2f5ea9b4783377a966b6d601d4</passwd>
+				<role>admin</role>
+			</user>
+		</users>
+	</configuration>
+	
+	<configuration id="ohyeah">
+		<property name="protocolLocation">
+			<![CDATA[/protocolv2/processor]]>   
+		</property>
+		<property name="amountUnit">元宝</property>
+		<property name="cashToAmountRatio">10</property>
+		<property name="rechargeRatio">10</property>
+		<property name="daySubscribeLimit">50</property>
+		<property name="monthSubscribeLimit">100</property>
+		<property name="supportSubscribeLimit">false</property>
+		<restricts>
+			<timeRestrict>
+				<productId>5</productId>
+				<subscribeEnableDate>2011/10/01</subscribeEnableDate>
+			</timeRestrict>
+			<timeRestrict>
+				<productId>6</productId>
+				<subscribeEnableDate>2011/10/01</subscribeEnableDate>
+			</timeRestrict>
+		</restricts>
+	</configuration>
+	
+	<configuration id="telcomCommon">
+		<property name="amountUnit">元</property>
+		<property name="cashToAmountRatio">1</property>
+		<property name="supportPoints">false</property>
+		<property name="pointsUnit">积分</property>
+		<property name="cashToPointsRatio">100</property>
+	</configuration>
+	
+	<configuration id="telcomhn">
+		<property name="amountUnit">元</property>
+		<property name="cashToAmountRatio">1</property>
+		<property name="supportPoints">false</property>
+		<property name="pointsUnit">积分</property>
+		<property name="cashToPointsRatio">100</property>
+	</configuration>
+	
+	<configuration id="telcomsh">
+		<property name="spid">HL0154</property>
+		<property name="epg"><![CDATA[Authentication.CTCGetConfig('EPGDomain')]]></property>
+		<property name="ssoMode">redirect</property>
+		<property name="ssoUrl">
+			<![CDATA[http://124.75.29.164:7001/iptv3a/VASGetUserinfoAction.do?Action=UserTokenRequest&SPID=%s&ReturnURL=%s&ReturnInfo=%s]]>
+		</property>
+		<property name="authorizeMode">webservice</property>
+		<property name="authorizeUrl">
+			<![CDATA[http://124.75.29.164:7001/iptv3a/services/VasServiceSoapImpl]]>
+		</property>
+		<property name="amountUnit">元</property>
+		<property name="cashToAmountRatio">1</property>
+		<property name="supportPoints">false</property>
+		<property name="pointsUnit">积分</property>
+		<property name="cashToPointsRatio">100</property>
+		<property name="queryPointsUrl">http://222.68.195.70:8080/remarkDispatcher/PointQueryInterfacePort</property>
+		<property name="queryPointsCheckCodeKey">aaa</property>
+		<property name="queryUserInfoUrl">http://124.75.29.171:7001/iptvInfo/services/UserInfoService</property>
+		<property name="subscribeMode">redirect</property>
+		<property name="subscribeUrl">
+			<![CDATA[http://124.75.29.164:7001/iptv3a/user/subscribe/subscribe.do?Action=1&UserID=%s&ProductID=%s&UserToken=%s&SPID=%s&ReturnURL=%s]]>
+		</property>
+		<property name="unsubscribeMode">redirect</property>
+		<property name="unsubscribeUrl">
+			<![CDATA[http://124.75.29.164:7001/iptv3a/user/subscribe/subscribe.do?Action=2&UserID=%s&ProductID=%s&UserToken=%s&SPID=%s&ReturnURL=%s]]>
+		</property>
+		
+		<!--上海新接口地址-->
+		<property name="expenseUrl">
+			<![CDATA[http://222.68.195.16:82/gp/consume.html?sp_id=%s&game_id=%s&order_id=%s&description=%s&timestamp=%s&return_url=%s&amount=%s&version=%s&digest=%s]]>
+		</property>
+		<property name="expenseVersion">1.0.0</property>
+		<property name="sp_key">tTREnvq</property>
+		<property name="sp_id">HL0154</property>
+
+		<!-- 认证地址-->
+		<property name="secondSSOUrl">
+			<![CDATA[http://124.75.29.164:7001/iptv3a/VASGetUserinfoMoreAction.do]]>
+		</property>
+		<property name="thirdSSOUrl">
+			<![CDATA[http://124.75.29.174:7001/iptv3a/VASGetUserinfoMoreAction.do]]>
+		</property>
+		<property name="prefixexpenseUrl">
+			<![CDATA[http://222.68.195.16:82/gp/consume.html]]>
+		</property>
+		<property name="serverUrl">
+			<![CDATA[http://222.68.195.67/itvgame/subscribe/subscribeAction]]>
+		</property>
+		
+		
+		<ids>
+			<id subscribeId="1000702403" type="period" period="0" amount="2"/>
+		</ids>
+		
+		<patterns>
+			<pattern name="action"><![CDATA[<form.*?action\s?=\s?"?([^\s"]*)"?.*?>]]></pattern>
+			<pattern name="param"><![CDATA[<input.*?type\s?=\s?"?hidden"?.*?name\s?=\s?"?([^\s"]*)"?\s+value\s?=\s?"?([^\s"]*)"?.*?>]]></pattern>
+			<pattern name="backUrl"><![CDATA[<a.*?onclick\s?=\s?"?location\.href='([^']*)'"?.*?>]]></pattern>
+			<pattern name="result"><![CDATA[[?&]result=([^&]*)]]></pattern>
+		</patterns>
+		
+		<!-- 电信积分畅游参数 -->
+		<property name="privateKey">ohyeahGame</property>
+		
+		<!-- 喜洋洋积分兑换ID -->
+		<property name="productID">1000</property>
+		<property name="gameCoin">300</property>
+		
+		<!-- 龙猫勇士兑换ID -->
+		<property name="productID2">2000</property>
+		<property name="gameCoin2">400</property>
+	</configuration>
+	
+	<configuration id="the9">
+		<property name="amountUnit">代币</property>
+		<property name="cashToAmountRatio">1</property>
+		<property name="supportPoints">false</property>
+		<property name="subscribeMode">webservice</property>
+		<property name="subscribeUrl">
+			<![CDATA[http://114.80.197.24/Platform3Service/UserService.svc]]>
+		</property>
+	</configuration>
+	
+	<configuration id="chinagames">
+		<property name="amountUnit">元</property>
+		<property name="cashToAmountRatio">1</property>
+		<property name="supportPoints">true</property>
+		<property name="subscribeMode">redirect</property>
+		<property name="subscribeUrl">
+			<![CDATA[http://222.68.195.20:8080/zy_portal/subscribe/subscribe?Action=1&UserID=%s&ProductID=%s&UserToken=%s&SPID=%s&ReturnURL=%s]]>
+		</property>
+		<property name="unsubscribeMode">redirect</property>
+		<property name="unsubscribeUrl">
+			<![CDATA[http://222.68.195.20:8080/zy_portal/subscribe/subscribe?Action=2&UserID=%s&ProductID=%s&UserToken=%s&SPID=%s&ReturnURL=%s]]>
+		</property>
+	</configuration>
+	
+    <configuration id="dijoy">
+        <property name="amountUnit">金币</property>
+        <property name="cashToAmountRatio">1</property>
+        <property name="supportPoints">false</property>
+        <property name="payUrl">
+			<![CDATA[http://220.248.44.50:11000/common/php/business/apppay.php]]>
+		</property>
+		
+		<!-- 该参数为true时，payUrl值用配置的值，否则用前台传递的值 -->
+		<property name="payUrlConfiguration">false</property>
+    </configuration>
+    
+    <configuration id="shengyi">
+		<property name="amountUnit">元</property>
+		<property name="cashToAmountRatio">1</property>
+		<property name="supportPoints">true</property>
+		<property name="subscribeMode">webservice</property>
+		<property name="rechargeUrl">
+			<![CDATA[order_coins?userid=%s&username=%s&spid=%s&stbType=%s&product=%s&money=%s&gameid=%s&enterURL=%s&zyUserToken=%s&checkCode=%s&payType=%s]]>
+		</property>
+	</configuration>
+	
+	<configuration id="shixian">
+		<property name="appid">sp000003</property>
+		<property name="amountUnit">元</property>
+		<property name="cashToAmountRatio">1</property>
+		<property name="supportPoints">true</property>
+		<property name="subscribeMode">webservice</property>
+		<property name="rechargeUrl">
+			<![CDATA[http://125.119.1.40:8086/tvplat4/pay/pay_epibolyPayment.action?payChoose=%s&appid=%s]]>
+		</property>
+		<property name="urlPattern">
+			<![CDATA[?payChoose=%s&appid=%s]]>
+		</property>
+	</configuration>
+</configurations>

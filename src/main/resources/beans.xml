@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<!-- dao impl for mysql -->
+	<dao name="mysql.accountDao" class="cn.ohyeah.itvgame.platform.dao.impl.MysqlAccountDaoImpl"/>
+	<dao name="mysql.accountPermissionDao" class="cn.ohyeah.itvgame.platform.dao.impl.MysqlAccountPermissionDaoImpl"/>
+	<dao name="mysql.accountPropDao" class="cn.ohyeah.itvgame.platform.dao.impl.MysqlAccountPropDaoImpl"/>
+	<dao name="mysql.authorizationDao" class="cn.ohyeah.itvgame.platform.dao.impl.MysqlAuthorizationDaoImpl"/>
+	<dao name="mysql.productPermissionDao" class="cn.ohyeah.itvgame.platform.dao.impl.MysqlProductPermissionDaoImpl"/>
+	<dao name="mysql.gamePropDao" class="cn.ohyeah.itvgame.platform.dao.impl.MysqlGamePropDaoImpl"/>
+	<dao name="mysql.purchaseRelationDao" class="cn.ohyeah.itvgame.platform.dao.impl.MysqlPurchaseRelationDaoImpl"/>
+	<dao name="mysql.productClassDao" class="cn.ohyeah.itvgame.platform.dao.impl.MysqlProductClassDaoImpl"/>
+	<dao name="mysql.productDetailDao" class="cn.ohyeah.itvgame.platform.dao.impl.MysqlProductDetailDaoImpl"/>
+	<dao name="mysql.productDao" class="cn.ohyeah.itvgame.platform.dao.impl.MysqlProductDaoImpl"/>
+	<dao name="mysql.productProviderDao" class="cn.ohyeah.itvgame.platform.dao.impl.MysqlProductProviderDaoImpl"/>
+	<dao name="mysql.purchaseRecordDao" class="cn.ohyeah.itvgame.platform.dao.impl.MysqlPurchaseRecordDaoImpl"/>
+	<dao name="mysql.subscribeRecordDao" class="cn.ohyeah.itvgame.platform.dao.impl.MysqlSubscribeRecordDaoImpl"/>
+	<dao name="mysql.gameAttainmentDao" class="cn.ohyeah.itvgame.platform.dao.impl.MysqlGameAttainmentDaoImpl"/>
+	<dao name="mysql.gameRecordDao" class="cn.ohyeah.itvgame.platform.dao.impl.MysqlGameRecordDaoImpl"/>
+
+	<!-- server dao impl for ms sql server -->
+	<dao name="sqlserver.accountDao" class="cn.ohyeah.itvgame.platform.dao.impl.SqlserverAccountDaoImpl"/>
+	<dao name="sqlserver.accountPermissionDao" class="cn.ohyeah.itvgame.platform.dao.impl.SqlserverAccountPermissionDaoImpl"/>
+	<dao name="sqlserver.accountPropDao" class="cn.ohyeah.itvgame.platform.dao.impl.SqlserverAccountPropDaoImpl"/>
+	<dao name="sqlserver.authorizationDao" class="cn.ohyeah.itvgame.platform.dao.impl.SqlserverAuthorizationDaoImpl"/>
+	<dao name="sqlserver.productPermissionDao" class="cn.ohyeah.itvgame.platform.dao.impl.SqlserverProductPermissionDaoImpl"/>
+	<dao name="sqlserver.gamePropDao" class="cn.ohyeah.itvgame.platform.dao.impl.SqlserverGamePropDaoImpl"/>
+	<dao name="sqlserver.purchaseRelationDao" class="cn.ohyeah.itvgame.platform.dao.impl.SqlserverPurchaseRelationDaoImpl"/>
+	<dao name="sqlserver.productClassDao" class="cn.ohyeah.itvgame.platform.dao.impl.SqlserverProductClassDaoImpl"/>
+	<dao name="sqlserver.productDetailDao" class="cn.ohyeah.itvgame.platform.dao.impl.SqlserverProductDetailDaoImpl"/>
+	<dao name="sqlserver.productDao" class="cn.ohyeah.itvgame.platform.dao.impl.SqlserverProductDaoImpl"/>
+	<dao name="sqlserver.productProviderDao" class="cn.ohyeah.itvgame.platform.dao.impl.SqlserverProductProviderDaoImpl"/>
+	<dao name="sqlserver.purchaseRecordDao" class="cn.ohyeah.itvgame.platform.dao.impl.SqlserverPurchaseRecordDaoImpl"/>
+	<dao name="sqlserver.subscribeRecordDao" class="cn.ohyeah.itvgame.platform.dao.impl.SqlserverSubscribeRecordDaoImpl"/>
+	<dao name="sqlserver.gameAttainmentDao" class="cn.ohyeah.itvgame.platform.dao.impl.SqlserverGameAttainmentDaoImpl"/>
+	<dao name="sqlserver.gameRecordDao" class="cn.ohyeah.itvgame.platform.dao.impl.SqlserverGameRecordDaoImpl"/>
+
+	<!-- business impl facade -->
+	<bean name="authorizeImpl" class="cn.ohyeah.itvgame.business.service.impl.AuthorizeImpl"/>
+	<bean name="permitImpl" class="cn.ohyeah.itvgame.business.service.impl.PermitImpl"/>
+	<bean name="subscribeImplFacade" class="cn.ohyeah.itvgame.business.service.impl.SubscribeImplFacade"/>
+	<bean name="rechargeImplFacade" class="cn.ohyeah.itvgame.business.service.impl.RechargeImplFacade"/>
+	<bean name="purchaseImplFacade" class="cn.ohyeah.itvgame.business.service.impl.PurchaseImplFacade"/>
+	<bean name="pointsServiceImplFacade" class="cn.ohyeah.itvgame.business.service.impl.PointsServiceImplFacade"/>
+	
+	<!-- telcom shanghai -->
+	<bean name="notsupport.pointsServiceImpl" class="cn.ohyeah.itvgame.business.service.impl.NotSupportPointsServiceImpl"/>
+	
+	<!-- telcom shanghai -->
+	<bean name="telcomsh.pointsServiceImpl" class="cn.ohyeah.itvgame.business.service.impl.TelcomshPointsServiceImpl"/>
+	<bean name="telcomsh.subscribeImpl" class="cn.ohyeah.itvgame.business.service.impl.TelcomshSubscribeImpl"/>
+	<bean name="telcomsh.rechargeImpl" class="cn.ohyeah.itvgame.business.service.impl.TelcomshRechargeImpl"/>
+	
+	<!-- chinagames at shanghai -->
+	<bean name="chinagames.subscribeImpl" class="cn.ohyeah.itvgame.business.service.impl.ChinagamesSubscribeImpl"/>
+	
+	<!-- the9 at shanghai/js etc.-->
+	<bean name="the9.subscribeImpl" class="cn.ohyeah.itvgame.business.service.impl.The9SubscribeImpl"/>
+	<bean name="the9.rechargeImpl" class="cn.ohyeah.itvgame.business.service.impl.The9RechargeImpl"/>
+	
+	<!-- dijoy -->
+	<bean name="dijoy.subscribeImpl" class="cn.ohyeah.itvgame.business.service.impl.DijoySubscribeImpl"/>
+	<bean name="dijoy.rechargeImpl" class="cn.ohyeah.itvgame.business.service.impl.DijoyRechargeImpl"/>
+	
+	<!-- shengyi -->
+	<bean name="shengyi.subscribeImpl" class="cn.ohyeah.itvgame.business.service.impl.ShengyiSubscribeImpl"/>
+	<bean name="shengyi.rechargeImpl" class="cn.ohyeah.itvgame.business.service.impl.ShengyiRechargeImpl"/>
+	
+	<!-- shixian at gansu -->
+	<bean name="shixian.subscribeImpl" class="cn.ohyeah.itvgame.business.service.impl.ShixianSubscribeImpl"/>
+	
+	<!-- ohyeah platform service -->
+	<bean name="game.rechargeImpl" class="cn.ohyeah.itvgame.business.service.impl.GameRechargeImpl"/>
+	<bean name="platform.rechargeImpl" class="cn.ohyeah.itvgame.business.service.impl.PlatformRechargeImpl"/>
+	<bean name="null.rechargeImpl" class="cn.ohyeah.itvgame.business.service.impl.NullRechargeImpl"/>
+
+	<!-- service layer -->
+	<bean name="accountService" class="cn.ohyeah.itvgame.platform.service.AccountService"/>
+	<bean name="accountPermissionService" class="cn.ohyeah.itvgame.platform.service.AccountPermissionService"/>
+	<bean name="productService" class="cn.ohyeah.itvgame.platform.service.ProductService"/>
+	<bean name="gamePropService" class="cn.ohyeah.itvgame.platform.service.GamePropService"/>
+	<bean name="purchaseRelationService" class="cn.ohyeah.itvgame.platform.service.PurchaseRelationService"/>
+	<bean name="productPermissionService" class="cn.ohyeah.itvgame.platform.service.ProductPermissionService"/>
+	<bean name="subscribeRecordService" class="cn.ohyeah.itvgame.platform.service.SubscribeRecordService"/>
+	<bean name="purchaseRecordService" class="cn.ohyeah.itvgame.platform.service.PurchaseRecordService"/>
+	<bean name="gameRecordService" class="cn.ohyeah.itvgame.platform.service.GameRecordService"/>
+	<bean name="gameAttainmentService" class="cn.ohyeah.itvgame.platform.service.GameAttainmentService"/>
+	<bean name="authorizationService" class="cn.ohyeah.itvgame.platform.service.AuthorizationService"/>
+	<bean name="platformService" class="cn.ohyeah.itvgame.platform.service.PlatformService"/>
+	<bean name="subscribeService" class="cn.ohyeah.itvgame.platform.service.SubscribeService"/>
+	<bean name="rechargeService" class="cn.ohyeah.itvgame.platform.service.RechargeService"/>
+	<bean name="purchaseService" class="cn.ohyeah.itvgame.platform.service.PurchaseService"/>
+	<bean name="pointService" class="cn.ohyeah.itvgame.point.service.PointService"/>
+	
+</beans>

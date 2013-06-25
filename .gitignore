@@ -1,0 +1,22 @@
+<<<<<<< HEAD
+/build
+/bin
+/out
+/.idea
+/.gradle
+*.iml
+*.ipr
+*.iws
+/.project
+/.classpath
+/.settings
+/.apt_generated
+/WebContent/data
+=======
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+>>>>>>> e3088ec6a9f38753381583fbc5c60580ce3b5e41

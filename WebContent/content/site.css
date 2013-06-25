@@ -1,0 +1,164 @@
+a:link
+{
+    font-family: "黑体";
+    color:black;
+    font-size: 18px;
+    text-decoration:none;
+}
+
+a:visited
+{
+    font-family: "黑体";
+    color:black;
+    font-size: 18px;
+    text-decoration:none;
+}
+.top-login-text
+{
+    display: block;
+    font-family: "黑体";
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    background: #153486;
+    padding: 4px;
+    margin: 4px;
+}
+
+.toolbar
+{
+    font-family: "黑体";
+    font-size: 16px;
+    color:Gray;
+}
+
+.toolbar h1
+{
+    margin:0px;
+    font-size: 18px;
+    color:#673A00;
+}
+
+.toolbar a:link
+{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.toolbar a:visited
+{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.grid
+{
+    font-family: "黑体";
+    color: #81D8EB;
+}
+
+.grid th
+{
+    text-align:left;
+    font-size:16px;
+    color:#ffffff;
+    height:26px;
+}
+
+.grid td
+{
+    font-size: 16px;
+    height:35px;
+}
+
+.grid a:link
+{
+    color: #81D8EB;
+    text-decoration: none;
+}
+.grid a:visited
+{
+    color: #81D8EB;
+    text-decoration: none;
+}
+
+img
+{
+    border:0px;
+}
+
+.form
+{
+    font-family: "黑体";
+    font-size: 18px;
+    color:#81D8EB;
+}
+
+.form td
+{
+    padding-left:5px;
+}
+
+.form textarea
+{
+    font-family: "黑体";
+    font-size: 18px;
+    color:Black;
+}
+
+.form input
+{
+    font-family: "黑体";
+    font-size: 18px;
+    color:Black;
+}
+
+.tab
+{
+    font-family: "黑体";
+    font-size: 18px;
+    color:#81D8EB;
+}
+
+.tab a
+{
+    color: #8E97C2;
+    text-decoration: none;
+}
+
+#selected_tab
+{
+    padding-top: 0;
+}
+#selected_tab div
+{
+    position:absolute;
+    margin:0px;
+    top:125px;
+    font-size: 22px;
+    color: white;
+}
+
+.matrix a
+{
+    font-family: "黑体";
+    font-size: 18px;
+    color:White;
+    text-decoration:none;
+}
+
+.cardtext
+{
+    position:absolute;
+    margin:0px;
+    font-family: "黑体";
+    font-size: 18px;
+    color:black;
+}
+
+#notification
+{
+    font-family: "黑体";
+    font-size: 18px;
+    color:black;
+}

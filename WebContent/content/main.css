@@ -1,0 +1,45 @@
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 18px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; BACKGROUND-COLOR: #000000; TEXT-ALIGN: center
+}
+.STYLE1 {
+	COLOR: #ffffff
+}
+.info {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; TEXT-INDENT: 36px; LINE-HEIGHT: 24px
+}
+.STYLE2 {
+	COLOR: #2d5ecc
+}
+.STYLE3 {
+	COLOR: #ffff00
+}
+.STYLE4 {
+	COLOR: #ff3300
+}
+.STYLE5 {
+	COLOR: #66cc00
+}
+.rooms {
+	WIDTH: 179px; COLOR: #ffffff; HEIGHT: 41px; TEXT-DECORATION: none
+}
+.games {
+	WIDTH: 179px; HEIGHT: 39px
+}
+.index_goods {
+	MARGIN-LEFT: 20px; WIDTH: 180px; HEIGHT: 39px
+}
+.index_goods_word {
+	MARGIN-TOP: 5px; FLOAT: left; OVERFLOW: hidden; WIDTH: 125px; COLOR: #ffffff; LINE-HEIGHT: 30px; HEIGHT: 30px
+}
+.index_goods IMG {
+	MARGIN-TOP: 5px; FLOAT: left
+}
+.link {
+	COLOR: #ffff00
+}
+.gonggao {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; COLOR: #ffffff; LINE-HEIGHT: 24px; PADDING-TOP: 10px
+}
+.gonggao P {
+	MARGIN: 0px; TEXT-INDENT: 36px
+}
